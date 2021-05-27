@@ -582,6 +582,7 @@ var contactForm = function () {
             $submit.css("display", "block").text(waitText);
           },
           success: function (msg) {
+            console.log(msg);
             if (msg == "OK") {
               $("#form-message-warning").hide();
               setTimeout(function () {
@@ -597,6 +598,7 @@ var contactForm = function () {
             }
           },
           error: function () {
+            console.log("Erro");
             $("#form-message-warning").html(
               "Algo deu errado. Por favor tente novamente."
             );
