@@ -115,7 +115,7 @@ var loader = function () {
     });
   }, 10);
   $(".site-loader-wrap").delay(200).fadeOut("slow");
-  $("#unslate_co--overlayer").delay(200).fadeOut("slow");
+  $("#overlayer").delay(200).fadeOut("slow");
 };
 
 var siteMenuClone = function () {
@@ -129,7 +129,7 @@ var siteMenuClone = function () {
     });
 
     var counter = 0;
-    $(".unslate_co--site-mobile-menu .has-children").each(function () {
+    $(".site-mobile-menu .has-children").each(function () {
       var $this = $(this);
 
       $this.prepend('<span class="arrow-collapse collapsed">');
@@ -290,7 +290,7 @@ var scrollWindow = function () {
   $(window).scroll(function (event) {
     var $w = $(this),
       st = $w.scrollTop(),
-      navbar = $(".unslate_co--site-nav");
+      navbar = $(".site-nav");
     // sd = $('.js-scroll-wrap');
 
     if (st > 150) {
@@ -366,7 +366,7 @@ var mobileToggleClick = function () {
 
   // click outisde offcanvas
   $(document).mouseup(function (e) {
-    var container = $(".unslate_co--site-mobile-menu");
+    var container = $(".site-mobile-menu");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       if ($("body").hasClass("offcanvas")) {
         $("body").removeClass("offcanvas");
@@ -383,7 +383,7 @@ var onePageNavigation = function () {
   var navToggler = $(".site-menu-toggle");
   $("body").on(
     "click",
-    ".unslate_co--site-nav .site-nav-ul li a[href^='#'], .smoothscroll[href^='#'], .unslate_co--site-mobile-menu .site-nav-wrap li a[href^='#']",
+    ".site-nav .site-nav-ul li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a[href^='#']",
     function (e) {
       e.preventDefault();
 
@@ -501,7 +501,7 @@ var loadPortfolioSinglePage = function (id, href) {
       pSingleHolder.append(
         '<div id="portfolio-single-' +
           id +
-          '" class="portfolio-single-inner"><span class="unslate_co--close-portfolio js-close-portfolio d-flex align-items-center"><span class="close-portfolio-label">Back to Portfolio</span><span class="icon-close2 wrap-icon-close"></span></span>' +
+          '" class="portfolio-single-inner"><span class="close-portfolio js-close-portfolio d-flex align-items-center"><span class="close-portfolio-label">Back to Portfolio</span><span class="icon-close2 wrap-icon-close"></span></span>' +
           getHTMLContent +
           "</div>"
       );
@@ -571,7 +571,7 @@ var contactForm = function () {
       /* submit via ajax */
       submitHandler: function (form) {
         var $submit = $(".submitting"),
-          waitText = "Submitting...";
+          waitText = "Enviando...";
 
         $.ajax({
           type: "POST",
@@ -612,7 +612,7 @@ var contactForm = function () {
 };
 
 var stickyFillPlugin = function () {
-  var elements = document.querySelectorAll(".unslate_co--sticky");
+  var elements = document.querySelectorAll(".sticky");
   Stickyfill.add(elements);
 };
 
