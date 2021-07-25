@@ -2270,7 +2270,8 @@ span.error {
 
 .solution_cards_box .solution_card {
   flex: 0 50%;
-  background: #fff;
+  /* background: #fff; */
+  background: #050505;
   box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
   border-radius: 15px;
   margin: 8px;
@@ -2283,7 +2284,7 @@ span.error {
 }
 
 .solution_cards_box .solution_card:hover {
-  background: #309df0;
+  background: #000;
   color: #fff;
   transform: scale(1.1);
   z-index: 9;
@@ -2294,9 +2295,11 @@ span.error {
 }
 
 /* .solution_cards_box .solution_card:hover .solu_title h3, */
+
 .solution_cards_box .solution_card:hover .solu_description p {
   /* color: #04d361; */
-  color: #000;
+  color: #fff;
+  /* color: #000; */
 }
 
 .solution_cards_box .solution_card:before {
@@ -2331,7 +2334,7 @@ span.error {
 .solution_card .solu_description p {
   font-size: 15px;
   margin-bottom: 15px;
-  color: #000;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .solution_card .solu_description button {
@@ -2375,7 +2378,7 @@ span.error {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #fff;
+  background: #191919;
   overflow: hidden;
   display: flex;
   align-items: center;
